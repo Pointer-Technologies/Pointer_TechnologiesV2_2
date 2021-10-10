@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+
+    <!-- Light mode theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar" >
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/ubuntu</item>
+        <item name="android:listDivider"> @android:color/transparent </item>
+        <item name="colorPrimary">@color/colorToolbar</item>
+        <item name="colorPrimaryDark">@color/colorToolbar</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorText">@color/colorAccent</item>
+        <item name="colorHint">@color/green</item>
+        <item name="colorWarning">@color/red</item>
+        <item name="colorBackground">@color/white</item>
+        <item name="colorTitle">@color/colorTitle</item>
+        <item name="actionMenuTextColor">@color/colorTitle</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+</resources>

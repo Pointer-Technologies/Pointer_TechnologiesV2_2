@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Choose a color:"
+        android:textSize="16sp" />
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iconColorBlack"
+            android:layout_marginEnd="5dp"
+            android:buttonTint="@color/black"
+            android:text="Black" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iconColorYellow"
+            android:layout_marginEnd="5dp"
+            android:buttonTint="@color/yellow"
+            android:text="Yellow" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iconColorRed"
+            android:layout_marginEnd="5dp"
+            android:buttonTint="@color/red"
+            android:text="Red" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iconColorGreen"
+            android:layout_marginEnd="5dp"
+            android:buttonTint="@color/green"
+            android:text="Green" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iconColorBlue"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Blue" />
+
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageCar"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="car"
+                    android:src="@drawable/ic_car"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="19dp" />
+
+                <ImageView
+                    android:id="@+id/imageBike"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_bike"
+                    tools:layout_editor_absoluteX="203dp"
+                    tools:layout_editor_absoluteY="17dp" />
+
+                <ImageView
+                    android:id="@+id/imageMotor"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_motor"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="205dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/imageScooter"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_scooter"
+                    tools:layout_editor_absoluteX="221dp"
+                    tools:layout_editor_absoluteY="200dp" />
+
+
+                <ImageView
+                    android:id="@+id/imageTV"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_tv"
+                    tools:layout_editor_absoluteX="41dp"
+                    tools:layout_editor_absoluteY="366dp" />
+
+                <ImageView
+                    android:id="@+id/imageKeys"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_key"
+                    tools:layout_editor_absoluteX="225dp"
+                    tools:layout_editor_absoluteY="362dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageTablet"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_tablet" />
+
+                <ImageView
+                    android:id="@+id/imageAndroid"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_android" />
+
+                <ImageView
+                    android:id="@+id/imageIphone"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_iphone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imagePet"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_pet" />
+
+                <ImageView
+                    android:id="@+id/imageWallet"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_wallet" />
+
+                <ImageView
+                    android:id="@+id/imagePeople"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_people" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/helpDialogEmailRelative">
+
+        <ImageView
+            android:id="@+id/imageViewEmail"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/ic_email"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@string/sendEmail" />
+
+        <TextView
+            android:id="@+id/helpDialogEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="13dp"
+            android:text="@string/email"
+            android:textSize="20sp"
+            android:layout_toEndOf="@+id/imageViewEmail"
+            android:layout_marginStart="10dp"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/helpDialogPhoneRelative">
+
+        <ImageView
+            android:id="@+id/imageViewPhone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/ic_phone"
+            android:contentDescription="@string/phoneCall" />
+        <TextView
+            android:id="@+id/helpDialogPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="13dp"
+            android:text="@string/phone"
+            android:textSize="20sp"
+            android:layout_toEndOf="@+id/imageViewPhone"/>
+    </RelativeLayout>
+</LinearLayout>

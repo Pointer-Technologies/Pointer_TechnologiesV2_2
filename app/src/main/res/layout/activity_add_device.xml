@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddDeviceActivity"
+    style="@style/AppTheme">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:elevation="8dp"
+        android:id="@+id/addDeviceToolbar"
+        style="@style/Widget.MaterialComponents.ActionBar.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:titleTextColor="?colorTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Adding Device"
+        tools:targetApi="m" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editAddNameLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addDeviceToolbar"
+        app:layout_constraintVertical_bias="0.236"
+        android:hint="@string/name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:helperTextEnabled="true"
+        app:helperText="A name that will help you recognize the sticker."
+        app:helperTextTextColor="@color/colorAccent"
+        app:helperTextTextAppearance="@font/ubuntu"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@font/ubuntu">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editAddName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/ubuntu"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editAddPasswordLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editAddNameLayout"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu"
+        android:hint="@string/deviceCode"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@font/ubuntu"
+        app:helperText="This code is on the down side of the sticker."
+        app:helperTextEnabled="true"
+        app:helperTextTextAppearance="@font/ubuntu"
+        app:helperTextTextColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addDeviceToolbar"
+        app:layout_constraintVertical_bias="0.366">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editAddPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonAddDevice"
+        android:text="@string/add"
+        app:icon="@drawable/ic_add"
+        app:backgroundTint="@color/colorAccent"
+        app:iconTint="@color/white"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAddPasswordLayout"
+        app:layout_constraintVertical_bias="0.72"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toEndOf="@+id/buttonAddDevice"
+        app:layout_constraintTop_toBottomOf="@+id/editAddPasswordLayout"
+        app:layout_constraintVertical_bias="0.738"
+        app:srcCompat="@drawable/ic_home"
+        app:tint="@color/white"
+        android:contentDescription="@string/returnHome"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

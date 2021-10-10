@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/addTopBar"
+        android:title="Add Device"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_add"/>
+
+    <item android:id="@+id/nightModeTopBar"
+        android:icon="@drawable/ic_dark_mode2"
+        android:title="Night Mode"
+        android:checkable="true"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/colorTitle"/>
+
+    <item android:id="@+id/helpTopBar"
+        android:title="Help"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/signOutTopBar"
+        android:title="Sign Out"
+        app:showAsAction="never"/>
+
+
+</menu>

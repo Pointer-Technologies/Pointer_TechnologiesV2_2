@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relLayout"
+    tools:context=".SignInActivity"
+    style="@style/AppTheme">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:elevation="8dp"
+        android:id="@+id/registerToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/colorTitle"
+        android:layoutDirection="rtl"
+        style="@style/Widget.MaterialComponents.ActionBar.Primary"
+        app:navigationIcon="@drawable/ic_back">
+
+        <TextView
+            android:id="@+id/textRegistrationForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/registerToolbar"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/registrationForm"
+            android:textColor="@color/colorTitle"
+            android:textSize="20sp"
+            android:letterSpacing="0.05"
+            android:fontFamily="@font/ubuntu"
+            android:clickable="false"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editNameLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/name"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/registerToolbar"
+        android:layout_marginEnd="20dp"
+        app:errorTextColor="@color/colorAccent"
+        app:errorIconTint="@color/colorAccent"
+        app:errorEnabled="true"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editEmailLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/email"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/editNameLayout"
+        android:layout_marginEnd="20dp"
+        app:errorTextColor="@color/colorAccent"
+        app:errorIconTint="@color/colorAccent"
+        app:errorEnabled="true"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu"
+            android:hint="@string/email"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editPasswordLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/password"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/editEmailLayout"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorAccent"
+        android:layout_marginEnd="20dp"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/colorAccent"
+        app:errorIconTint="@color/colorAccent"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editPassword"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editReEnterPasswordLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/ReEnterPassword"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/editPasswordLayout"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorAccent"
+        android:layout_marginEnd="20dp"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/colorAccent"
+        app:errorIconTint="@color/colorAccent"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editReEnterPassword"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editReEnterPasswordLayout"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/ubuntu"
+        android:text="@string/country"
+        android:textColor="@color/colorAccent"/>
+
+
+
+    <TextView
+        android:id="@+id/textCheckEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editNameLayout"
+        android:layout_marginStart="20dp"
+        android:text="@string/textCheckEmail"
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:visibility="invisible" />
+
+    <Spinner
+        android:id="@+id/spinnerCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editReEnterPasswordLayout"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu"
+        android:entries="@array/countries"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:id="@+id/textLicence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerCountry"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/ubuntu"
+        android:text="@string/licence"
+        android:layout_marginStart="20dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/licence_agree"
+        app:buttonTint="@color/colorAccent"
+        android:layout_below="@+id/textLicence"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textCheckLicence"
+        android:text="@string/licence_warning"
+        android:layout_below="@+id/checkBox"
+        android:textColor="@color/colorAccent"
+        android:textStyle="italic"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="@string/register"
+        app:backgroundTint="@color/colorAccent" />
+
+
+
+</RelativeLayout>
+
+
+

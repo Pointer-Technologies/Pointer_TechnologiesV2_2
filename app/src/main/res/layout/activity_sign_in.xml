@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity"
+    android:id="@+id/relLoginLayout"
+    style="@style/AppTheme"
+    android:rotationY="0">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/signInToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/colorTitle"
+        app:title="Sign In"
+        style="@style/Widget.MaterialComponents.ActionBar.Primary"
+        android:elevation="8dp"
+        app:menu="@menu/sign_in_menu"
+        android:backgroundTint="@color/colorToolbar"
+        />
+
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:transitionName="logo_image"
+        android:src="@mipmap/pointer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/signInToolbar"
+        android:contentDescription="@string/pointer" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageLogo"
+        android:fontFamily="@font/roboto"
+        android:text="@string/pointerTechnologies"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:transitionName="logo_text"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/editLoginNameLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:passwordToggleTint="@color/colorAccent"
+        app:boxStrokeColor="@color/colorAccent"
+        app:hintTextColor="@color/colorAccent"
+        android:layout_below="@+id/imageLogo"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        android:hint="@string/email"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editLoginName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu"
+            android:inputType="textEmailAddress"
+            android:autofillHints=""
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editLoginNameLayout"
+        android:layout_marginEnd="20dp"
+        app:passwordToggleEnabled="true"
+        android:id="@+id/editLoginPasswordLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:passwordToggleTint="@color/colorAccent"
+        app:boxStrokeColor="@color/colorAccent"
+        app:hintTextColor="@color/colorAccent"
+        android:hint="@string/password"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/ubuntu"
+            android:inputType="textPassword"
+            android:autofillHints=""
+            android:id="@+id/editLoginPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/rememberMe"
+        android:layout_below="@+id/textWrongInput"
+        android:id="@+id/checkBoxRememberMe"
+        app:buttonTint="@color/colorAccent"
+        />
+
+    <Button
+        android:id="@+id/textNotRegistered"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/googleSignInButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/colorMode"
+        android:elevation="8dp"
+        android:text="@string/notRegistered"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/textForgotPassword"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editLoginPasswordLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_alignBottom="@id/checkBoxRememberMe"
+        android:layout_alignTop="@id/checkBoxRememberMe"
+        android:fontFamily="@font/ubuntu"
+        android:text="@string/forgotPassword"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wrongEntries"
+        android:id="@+id/textWrongInput"
+        android:layout_below="@+id/editLoginPasswordLayout"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/red"
+        android:textStyle="italic"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/googleSignInButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/colorAccent"
+        android:textAlignment="center" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSignIn"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxRememberMe"
+        android:layout_marginTop="20dp"
+        android:text="@string/signIn"
+        app:backgroundTint="@color/colorAccent"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
