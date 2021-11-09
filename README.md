@@ -3,7 +3,7 @@
 
 This the first app our team built, that was later replaced by the Flutter project.
 
-It is fully-functional, except for the tracker setup functionality. Our team decided to make the codebase, for both the Flutter and Java (Android Studio), public to serve as assistance to anyone starting their own big-scale project.
+It is fully-functional, except for the tracker setup functionality. Our team decided to make the codebase, for both Flutter and Java (Android Studio), public to serve as assistance to anyone starting their own big-scale project.
 
 It consists of:
 - A sign in screen
